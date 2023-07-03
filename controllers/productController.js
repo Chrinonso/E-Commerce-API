@@ -18,7 +18,7 @@ const getAllProducts = async (req, res) => {
 const getSingleProduct = async (req, res) => {
     
     const { id: productId } = req.params;
-    const product = await Product.findOne({_id:productId});
+    const product = await Product.findOne({_id:productId}).populate('reviews'); // populate method helps us to get info on our product and we have already connected all schemas
     if(!product) {
         throw new CustomError.BadRequestError(`No product with ID ${productId}` );
 
@@ -67,6 +67,8 @@ const uploadImage = async (req, res) => {
     await productImage.mv(imagePath);
     res.status(StatusCodes.OK).json({ image: `/uploads/${productImage.name}` });
 };
+
+
 
 module.exports = {
     createProduct,

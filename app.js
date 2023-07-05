@@ -39,14 +39,12 @@ app.use(mongoSanitize());
 
 
 
-
 app.use(morgan('tiny'));
 app.use(express.json());
 app.use(cookieParser(process.env.JWT_SECRET));
 
-app.use(express.static('/public'));
+app.use(express.static('./public'));
 app.use(fileUpload());
-
 
 
 

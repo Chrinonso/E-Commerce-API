@@ -1,6 +1,5 @@
-## Hosted Project
-
-[E-Commerce API Heroku URL](https://e-commerce-api-10.herokuapp.com/)
+The Process i took towards building this API
+* it can be helpful to you in building a simple API
 
 #### Setup Basic Express Server
 
@@ -65,7 +64,7 @@
 
 #### Handle Password
 
-- [] UserSchema.pre('save') - hook
+- [] UserSchema.pre('save') - hook( this is handled as a Pre-save hook in our Schema)
 - this points to User
 - bcrypt.genSalt - number of rounds
 - bcrypt.hash (do all this in the Models.. set them up as middlewares in your schema)
@@ -186,7 +185,7 @@ allow only admins get access to all users.  admin
 
 - [] add productController file in controllers
 - [] export (createProduct, getAllProducts,
-  getSingleProduct, updateProduct, deleteProduct, uploadImage) functions
+  getSingleProduct, updateProduct, deleteProduct, uploadImage) functions(require the path module to use this)
 - [] res.send('function name')
 - [] setup productRoutes file in routes
 - [] import all controllers
@@ -357,7 +356,7 @@ MV function in express-file upload package helps us to move a file to the specif
 - [] express-mongo-sanitize
 - [] cors (cookies!!!!)
 
-#### Deploy on Heroku
+#### Deploy on Heroku/Render
 
 - [] heroku account and heroku cli
 - [] remove/copy from the main repo

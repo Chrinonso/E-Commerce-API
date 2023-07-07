@@ -35,6 +35,7 @@ The Process i took towards building this API
 - [] export mongoose model
 
 #### Validator Package
+it is used in the mongoose to validate (Email and name and others)
 
 - [Validator](https://www.npmjs.com/package/validator)
 
